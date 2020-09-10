@@ -1,0 +1,2 @@
+rootProject.name='PicassoEx01'
+include ':app'

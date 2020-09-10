@@ -1,0 +1,2 @@
+rootProject.name='GlideEx'
+include ':app'

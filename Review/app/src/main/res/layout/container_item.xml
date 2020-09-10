@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.mini.review.adapter.ImageBindingAdapter"/>
+        <variable
+            name="product"
+            type="com.mini.review.model.Product" />
+    </data>
+
+<RelativeLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <ImageView
+        android:id="@+id/iv_thumnail"
+        android:layout_alignParentLeft="true"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        app:thumnail="@{product.thumnail}"/>
+
+
+    <LinearLayout
+        android:layout_toRightOf="@id/iv_thumnail"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="제목"
+            android:text="@{product.title}"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/tv_create_date"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:hint="날짜"
+            android:text="@{product.day}"
+            android:textSize="20sp"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+</layout>

@@ -1,0 +1,2 @@
+rootProject.name='TopNaviex'
+include ':app'
